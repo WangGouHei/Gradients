@@ -29,7 +29,7 @@ public extension Direction {
             return CGPoint(x: 0.5, y: 0.0)
         case .degree(let degree):
             let radian = degree * .pi / 180
-            return CGPoint(x: 0.5 * (cos(radian) + 1), y: 0.5 * (1 - sin(radian)))
+            return CGPoint(x: 0.5 * (1 - sin(radian)), y: 0.5 * (1 - cos(radian)))
         }
     }
 
@@ -45,7 +45,7 @@ public extension Direction {
             return CGPoint(x: 0.5, y: 1.0)
         case .degree(let degree):
             let radian = degree * .pi / 180
-            return CGPoint(x: 0.5 * (cos(radian + .pi) + 1), y: 0.5 * (1 + sin(radian)))
+            return CGPoint(x: 0.5 * (1 + sin(radian)), y: 0.5 * (1 + cos(radian)))
         }
     }
 }
